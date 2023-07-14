@@ -14,7 +14,7 @@
     <meta name="author" content="pixelstrap" />
     <link rel="icon" href="images/logo.png" type="image/x-icon" />
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
-    <title>User</title>
+    <title>Schedule</title>
     <!-- Google font-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,7 +48,6 @@
     <link id="color" rel="stylesheet" href="css/color-1.css" media="screen" />
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
-    <link rel="stylesheet" type="text/css" href="css/vendors/datatables.css" />
   </head>
   <body>
     <!-- Loader starts-->
@@ -458,8 +457,8 @@
                     >
                   </li>
                   <li>
-                    <a href="login.html"
-                      ><i data-feather="log-in"> </i><span>Log in</span></a
+                    <a href="index.html"
+                      ><i data-feather="log-out"> </i><span>Log Out</span></a
                     >
                   </li>
                 </ul>
@@ -495,490 +494,272 @@
           </script>
         </div>
       </div>
-      <!-- Page Header Ends -->
+      <!-- Page Header Ends                              -->
+      <!-- Page Body Start-->
       <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
         <div class="sidebar-wrapper">
-          <div>
-            <div class="logo-wrapper">
-              <a href="index.html"
-                ><img
-                  class="img-fluid for-light"
-                  src="images/long-logo.png"
-                  alt /><img
-                  class="img-fluid for-dark"
-                  src="images/long-logo.png"
-                  alt
-              /></a>
-              <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+            <div>
+              <div class="logo-wrapper">
+                <a href="index.html"
+                  ><img
+                    class="img-fluid for-light"
+                    src="images/long-logo.png"
+                    alt /><img
+                    class="img-fluid for-dark"
+                    src="images/long-logo.png"
+                    alt
+                /></a>
+                <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+              </div>
+              <div class="logo-icon-wrapper">
+                <a href="index.html"
+                  ><img class="img-fluid" src="images/logo-icon.png" alt
+                /></a>
+              </div>
+              <nav class="sidebar-main">
+                <div class="left-arrow" id="left-arrow">
+                  <i data-feather="arrow-left"></i>
+                </div>
+                <div id="sidebar-menu">
+                  <ul class="sidebar-links" id="simple-bar">
+                    <li class="sidebar-list">
+                        <label class="badge badge-light-primary">2</label
+                        ><a
+                          class="sidebar-link sidebar-title"
+                          href="./dashboard.html"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g>
+                              <g>
+                                <path
+                                  d="M9.07861 16.1355H14.8936"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M2.3999 13.713C2.3999 8.082 3.0139 8.475 6.3189 5.41C7.7649 4.246 10.0149 2 11.9579 2C13.8999 2 16.1949 4.235 17.6539 5.41C20.9589 8.475 21.5719 8.082 21.5719 13.713C21.5719 22 19.6129 22 11.9859 22C4.3589 22 2.3999 22 2.3999 13.713Z"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </g>
+                            </g></svg
+                          ><span>Dashboard </span></a
+                        >
+                      </li>
+                      <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title" href="./employee.html"
+                          ><svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <g>
+                              <g>
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M11.9724 20.3683C8.73343 20.3683 5.96643 19.8783 5.96643 17.9163C5.96643 15.9543 8.71543 14.2463 11.9724 14.2463C15.2114 14.2463 17.9784 15.9383 17.9784 17.8993C17.9784 19.8603 15.2294 20.3683 11.9724 20.3683Z"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M11.9725 11.4488C14.0985 11.4488 15.8225 9.72576 15.8225 7.59976C15.8225 5.47376 14.0985 3.74976 11.9725 3.74976C9.84645 3.74976 8.12245 5.47376 8.12245 7.59976C8.11645 9.71776 9.82645 11.4418 11.9455 11.4488H11.9725Z"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M18.3622 10.3915C19.5992 10.0605 20.5112 8.93254 20.5112 7.58954C20.5112 6.18854 19.5182 5.01854 18.1962 4.74854"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M18.9431 13.5444C20.6971 13.5444 22.1951 14.7334 22.1951 15.7954C22.1951 16.4204 21.6781 17.1014 20.8941 17.2854"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M5.58372 10.3915C4.34572 10.0605 3.43372 8.93254 3.43372 7.58954C3.43372 6.18854 4.42772 5.01854 5.74872 4.74854"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                                <path
+                                  d="M5.00176 13.5444C3.24776 13.5444 1.74976 14.7334 1.74976 15.7954C1.74976 16.4204 2.26676 17.1014 3.05176 17.2854"
+                                  stroke="#130F26"
+                                  stroke-width="1.5"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </g>
+                            </g>
+                          </svg>
+                          <span>Employee </span>
+                        </a>
+                      </li>
+                      <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title" href="./shift.html"
+                          >
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                              <g> 
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.74976 12.7755C2.74976 5.81947 5.06876 3.50146 12.0238 3.50146C18.9798 3.50146 21.2988 5.81947 21.2988 12.7755C21.2988 19.7315 18.9798 22.0495 12.0238 22.0495C5.06876 22.0495 2.74976 19.7315 2.74976 12.7755Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M3.02515 9.32397H21.0331" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M16.4284 13.261H16.4374" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.0289 13.261H12.0379" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7.62148 13.261H7.63048" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M16.4284 17.113H16.4374" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M12.0289 17.113H12.0379" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7.62148 17.113H7.63048" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M16.033 2.05005V5.31205" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8.02466 2.05005V5.31205" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </g>
+                            </g>
+                          </svg>
+                          <span>Shift </span>
+                        </a>
+                      </li>
+                      <li class="sidebar-list">
+                        <a class="sidebar-link sidebar-title" href="./payroll.html"
+                          >
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g> 
+                              <g> 
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75024 12C2.75024 5.063 5.06324 2.75 12.0002 2.75C18.9372 2.75 21.2502 5.063 21.2502 12C21.2502 18.937 18.9372 21.25 12.0002 21.25C5.06324 21.25 2.75024 18.937 2.75024 12Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.42993 14.5697L14.5699 9.42969" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M14.4955 14.5H14.5045" stroke="#130F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M9.4955 9.5H9.5045" stroke="#130F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              </g>
+                            </g>
+                          </svg>
+                          <span>Payroll </span>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+                <div class="right-arrow" id="right-arrow">
+                  <i data-feather="arrow-right"></i>
+                </div>
+              </nav>
             </div>
-            <div class="logo-icon-wrapper">
-              <a href="index.html"
-                ><img class="img-fluid" src="images/logo-icon.png" alt
-              /></a>
-            </div>
-            <nav class="sidebar-main">
-              <div class="left-arrow" id="left-arrow">
-                <i data-feather="arrow-left"></i>
-              </div>
-              <div id="sidebar-menu">
-                <ul class="sidebar-links" id="simple-bar">
-                  <li class="back-btn">
-                    <a href="index.html"
-                      ><img class="img-fluid" src="images/logo-icon.png" alt
-                    /></a>
-                    <div class="mobile-back text-end">
-                      <span>Back</span
-                      ><i class="fa fa-angle-right ps-2" aria-hidden="true">
-                      </i>
-                    </div>
-                  </li>
-                  <li class="sidebar-list">
-                    <label class="badge badge-light-primary">2</label
-                    ><a
-                      class="sidebar-link sidebar-title"
-                      href="./dashboard.html"
-                    >
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g>
-                          <g>
-                            <path
-                              d="M9.07861 16.1355H14.8936"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M2.3999 13.713C2.3999 8.082 3.0139 8.475 6.3189 5.41C7.7649 4.246 10.0149 2 11.9579 2C13.8999 2 16.1949 4.235 17.6539 5.41C20.9589 8.475 21.5719 8.082 21.5719 13.713C21.5719 22 19.6129 22 11.9859 22C4.3589 22 2.3999 22 2.3999 13.713Z"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </g>
-                        </g></svg
-                      ><span>Dashboard </span></a
-                    >
-                  </li>
-                  <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="./employee.html"
-                      ><svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g>
-                          <g>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M11.9724 20.3683C8.73343 20.3683 5.96643 19.8783 5.96643 17.9163C5.96643 15.9543 8.71543 14.2463 11.9724 14.2463C15.2114 14.2463 17.9784 15.9383 17.9784 17.8993C17.9784 19.8603 15.2294 20.3683 11.9724 20.3683Z"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M11.9725 11.4488C14.0985 11.4488 15.8225 9.72576 15.8225 7.59976C15.8225 5.47376 14.0985 3.74976 11.9725 3.74976C9.84645 3.74976 8.12245 5.47376 8.12245 7.59976C8.11645 9.71776 9.82645 11.4418 11.9455 11.4488H11.9725Z"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                            <path
-                              d="M18.3622 10.3915C19.5992 10.0605 20.5112 8.93254 20.5112 7.58954C20.5112 6.18854 19.5182 5.01854 18.1962 4.74854"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                            <path
-                              d="M18.9431 13.5444C20.6971 13.5444 22.1951 14.7334 22.1951 15.7954C22.1951 16.4204 21.6781 17.1014 20.8941 17.2854"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                            <path
-                              d="M5.58372 10.3915C4.34572 10.0605 3.43372 8.93254 3.43372 7.58954C3.43372 6.18854 4.42772 5.01854 5.74872 4.74854"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                            <path
-                              d="M5.00176 13.5444C3.24776 13.5444 1.74976 14.7334 1.74976 15.7954C1.74976 16.4204 2.26676 17.1014 3.05176 17.2854"
-                              stroke="#130F26"
-                              stroke-width="1.5"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            ></path>
-                          </g>
-                        </g>
-                      </svg>
-                      <span>Employee </span>
-                    </a>
-                  </li>
-                  <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="./shift.html"
-                      >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g>
-                          <g> 
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.74976 12.7755C2.74976 5.81947 5.06876 3.50146 12.0238 3.50146C18.9798 3.50146 21.2988 5.81947 21.2988 12.7755C21.2988 19.7315 18.9798 22.0495 12.0238 22.0495C5.06876 22.0495 2.74976 19.7315 2.74976 12.7755Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M3.02515 9.32397H21.0331" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M16.4284 13.261H16.4374" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M12.0289 13.261H12.0379" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M7.62148 13.261H7.63048" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M16.4284 17.113H16.4374" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M12.0289 17.113H12.0379" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M7.62148 17.113H7.63048" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M16.033 2.05005V5.31205" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M8.02466 2.05005V5.31205" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </g>
-                        </g>
-                      </svg>
-                      <span>Shift </span>
-                    </a>
-                  </li>
-                  <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="./payroll.html"
-                      >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g> 
-                          <g> 
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75024 12C2.75024 5.063 5.06324 2.75 12.0002 2.75C18.9372 2.75 21.2502 5.063 21.2502 12C21.2502 18.937 18.9372 21.25 12.0002 21.25C5.06324 21.25 2.75024 18.937 2.75024 12Z" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M9.42993 14.5697L14.5699 9.42969" stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M14.4955 14.5H14.5045" stroke="#130F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M9.4955 9.5H9.5045" stroke="#130F26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                          </g>
-                        </g>
-                      </svg>
-                      <span>Payroll </span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="right-arrow" id="right-arrow">
-                <i data-feather="arrow-right"></i>
-              </div>
-            </nav>
           </div>
-        </div>
-        <!-- Page Sidebar Ends-->
-        <!-- Page Body Start-->
+          <!-- Page Sidebar Ends-->
         <div class="page-body">
           <div class="container-fluid">
             <div class="page-title">
               <div class="row">
                 <div class="col-12 col-sm-6">
-                  <h3>Employee</h3>
+                  <h3>Schedule</h3>
                 </div>
                 <div class="col-12 col-sm-6">
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item">
-                      <a href="dashboard.html">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-home"
-                        >
-                          <path
-                            d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                          ></path>
-                          <polyline
-                            points="9 22 9 12 15 12 15 22"
-                          ></polyline></svg
+                      <a class="home-item" href="index.html"
+                        ><i data-feather="home"></i
                       ></a>
                     </li>
-                    <li class="breadcrumb-item">Employee</li>
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item active">Schedule</li>
                   </ol>
                 </div>
               </div>
             </div>
           </div>
           <!-- Container-fluid starts-->
-          <div class="container-fluid">
-            <div class="edit-profile">
-              <div class="row">
+          <div class="container-fluid default-dash">
+            <div class="row">
                 <div class="col-sm-12">
-                  <div class="card">
-                    <div class="card-body">
+                    <div class="card">
+                      <div class="card-header">
+                        <h5>List Kode Shift</h5>
+                      </div>
                       <div class="table-responsive">
-                        <div id="advance-6_wrapper" class="dataTables_wrapper">
-                          <div class="dataTables_length" id="advance-6_length">
-                            <label
-                              >Show
-                              <select
-                                name="advance-6_length"
-                                aria-controls="advance-6"
-                                class=""
-                              >
-                                <option value="10">10</option>
-                                <option value="25">25</option>
-                                <option value="50">50</option>
-                                <option value="100">100</option>
-                              </select>
-                              entries</label
-                            >
-                          </div>
-                          <div id="advance-6_filter" class="dataTables_filter">
-                            <label
-                              >Search:<input
-                                type="search"
-                                class=""
-                                placeholder=""
-                                aria-controls="advance-6"
-                            /></label>
-                          </div>
-                          <table
-                            class="display dataTable"
-                            id="advance-6"
-                            role="grid"
-                            aria-describedby="advance-6_info"
-                            style="width: 602px"
-                          >
-                            <thead>
-                              <tr role="row">
-                                <th
-                                  rowspan="2"
-                                  class="sorting_asc"
-                                  tabindex="0"
-                                  aria-controls="advance-6"
-                                  colspan="1"
-                                  aria-sort="ascending"
-                                  aria-label="Name: activate to sort column descending"
-                                  style="width: 89px"
-                                >
-                                  Name
-                                </th>
-                                <th colspan="2" rowspan="1">HR Information</th>
-                                <th colspan="2" rowspan="1">Contact</th>
-                              </tr>
-                              <tr role="row">
-                                <th
-                                  class="sorting"
-                                  tabindex="0"
-                                  aria-controls="advance-6"
-                                  rowspan="1"
-                                  colspan="1"
-                                  aria-label="Position: activate to sort column ascending"
-                                  style="width: 138px"
-                                >
-                                  Position
-                                </th>
-                                <th
-                                  class="sorting"
-                                  tabindex="0"
-                                  aria-controls="advance-6"
-                                  rowspan="1"
-                                  colspan="1"
-                                  aria-label="Salary: activate to sort column ascending"
-                                  style="width: 58px"
-                                >
-                                  Salary
-                                </th>
-                                <th
-                                  class="sorting"
-                                  tabindex="0"
-                                  aria-controls="advance-6"
-                                  rowspan="1"
-                                  colspan="1"
-                                  aria-label="Office: activate to sort column ascending"
-                                  style="width: 68px"
-                                >
-                                  Office
-                                </th>
-                                <th
-                                  class="sorting"
-                                  tabindex="0"
-                                  aria-controls="advance-6"
-                                  rowspan="1"
-                                  colspan="1"
-                                  aria-label="Extn.: activate to sort column ascending"
-                                  style="width: 38px"
-                                >
-                                  Extn.
-                                </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">Airi Satou</td>
-                                <td>Accountant</td>
-                                <td>$162,700</td>
-                                <td>Tokyo</td>
-                                <td>5407</td>
-                              </tr>
-                              <tr role="row" class="even">
-                                <td class="sorting_1">Angelica Ramos</td>
-                                <td>Chief Executive Officer (CEO)</td>
-                                <td>$1,200,000</td>
-                                <td>London</td>
-                                <td>5797</td>
-                              </tr>
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">Ashton Cox</td>
-                                <td>Junior Technical Author</td>
-                                <td>$86,000</td>
-                                <td>San Francisco</td>
-                                <td>1562</td>
-                              </tr>
-                              <tr role="row" class="even">
-                                <td class="sorting_1">Bradley Greer</td>
-                                <td>Software Engineer</td>
-                                <td>$132,000</td>
-                                <td>London</td>
-                                <td>2558</td>
-                              </tr>
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">Brenden Wagner</td>
-                                <td>Software Engineer</td>
-                                <td>$206,850</td>
-                                <td>San Francisco</td>
-                                <td>1314</td>
-                              </tr>
-                              <tr role="row" class="even">
-                                <td class="sorting_1">Brielle Williamson</td>
-                                <td>Integration Specialist</td>
-                                <td>$372,000</td>
-                                <td>New York</td>
-                                <td>4804</td>
-                              </tr>
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">Bruno Nash</td>
-                                <td>Software Engineer</td>
-                                <td>$163,500</td>
-                                <td>London</td>
-                                <td>6222</td>
-                              </tr>
-                              <tr role="row" class="even">
-                                <td class="sorting_1">Caesar Vance</td>
-                                <td>Pre-Sales Support</td>
-                                <td>$106,450</td>
-                                <td>New York</td>
-                                <td>8330</td>
-                              </tr>
-                              <tr role="row" class="odd">
-                                <td class="sorting_1">Cara Stevens</td>
-                                <td>Sales Assistant</td>
-                                <td>$145,600</td>
-                                <td>New York</td>
-                                <td>3990</td>
-                              </tr>
-                              <tr role="row" class="even">
-                                <td class="sorting_1">Cedric Kelly</td>
-                                <td>Senior Javascript Developer</td>
-                                <td>$433,060</td>
-                                <td>Edinburgh</td>
-                                <td>6224</td>
-                              </tr>
-                            </tbody>
-                            <tfoot>
-                              <tr>
-                                <th rowspan="1" colspan="1">Name</th>
-                                <th rowspan="1" colspan="1">Position</th>
-                                <th rowspan="1" colspan="1">Salary</th>
-                                <th rowspan="1" colspan="1">Office</th>
-                                <th rowspan="1" colspan="1">Extn.</th>
-                              </tr>
-                            </tfoot>
-                          </table>
-                          <div
-                            class="dataTables_info"
-                            id="advance-6_info"
-                            role="status"
-                            aria-live="polite"
-                          >
-                            Showing 1 to 10 of 57 entries
-                          </div>
-                          <div
-                            class="dataTables_paginate paging_simple_numbers"
-                            id="advance-6_paginate"
-                          >
-                            <a
-                              class="paginate_button previous disabled"
-                              aria-controls="advance-6"
-                              data-dt-idx="0"
-                              tabindex="0"
-                              id="advance-6_previous"
-                              >Previous</a
-                            ><span
-                              ><a
-                                class="paginate_button current"
-                                aria-controls="advance-6"
-                                data-dt-idx="1"
-                                tabindex="0"
-                                >1</a
-                              ><a
-                                class="paginate_button"
-                                aria-controls="advance-6"
-                                data-dt-idx="2"
-                                tabindex="0"
-                                >2</a
-                              ><a
-                                class="paginate_button"
-                                aria-controls="advance-6"
-                                data-dt-idx="3"
-                                tabindex="0"
-                                >3</a
-                              ><a
-                                class="paginate_button"
-                                aria-controls="advance-6"
-                                data-dt-idx="4"
-                                tabindex="0"
-                                >4</a
-                              ><a
-                                class="paginate_button"
-                                aria-controls="advance-6"
-                                data-dt-idx="5"
-                                tabindex="0"
-                                >5</a
-                              ><a
-                                class="paginate_button"
-                                aria-controls="advance-6"
-                                data-dt-idx="6"
-                                tabindex="0"
-                                >6</a
-                              ></span
-                            ><a
-                              class="paginate_button next"
-                              aria-controls="advance-6"
-                              data-dt-idx="7"
-                              tabindex="0"
-                              id="advance-6_next"
-                              >Next</a
-                            >
-                          </div>
+                        <div class="row p-4">
+                          <div class="col-md-4"><input class="form-control" placeholder="Input Field" type="text"></div>
+                          <div class="col-md-4"><select class="form-control"><option>=</option><option>!=</option><option>></option><option><</option></select></div>
+                          <div class="col-md-4"><input class="form-control" placeholder="Input Keyword" type="text"></div>
+                          <div class="col-md-4 mt-4"><button type="button" class="btn btn-primary">Filter</button></div>
                         </div>
+                        <hr>
+                        <table class="table table-border-vertical">
+                          <thead>
+                            <tr>
+                              <th scope="col" style="width: 10px;">No.</th>
+                              <th scope="col">Kode Shift</th>
+                              <th scope="col">Keterangan</th>
+                              <th scope="col">Kode Warna</th>
+                              <th scope="col">Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                                <td scope="col">1.</td>
+                                <td scope="col">PG</td>
+                                <td scope="col">Shift Pagi</td>
+                                <td scope="col"><span style="background-color: darkcyan; padding: 5px; color: #fff;">#008b8b</span></td>
+                                <td>
+                                    <a class="icon" href="javascript:void(0)"></a>
+                                    <a class="btn btn-success btn-sm" href="#"><i class="fa fa-pencil"></i></a>
+                                    <a class="icon" href="javascript:void(0)"></a><a class="icon" href="javascript:void(0)"></a>
+                                    <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="col">2.</td>
+                                <td scope="col">OFF</td>
+                                <td scope="col">Cuti</td>
+                                <td scope="col"><span style="background-color: red; padding: 5px; color: #fff;">#FF0000</span></td>
+                                <td>
+                                    <a class="icon" href="javascript:void(0)"></a>
+                                    <a class="btn btn-success btn-sm" href="#"><i class="fa fa-pencil"></i></a>
+                                    <a class="icon" href="javascript:void(0)"></a><a class="icon" href="javascript:void(0)"></a>
+                                    <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
-                </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-12 footer-copyright text-center">
+                <p class="mb-0">Develope By 2MB With ❤️</p>
               </div>
             </div>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
     <!-- latest jquery-->
@@ -1014,8 +795,6 @@
     <script src="js/handlebars_1.js"></script>
     <script src="js/typeahead-custom.js"></script>
     <script src="js/height-equal.js"></script>
-    <script src="js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="js/datatable/datatables/datatable.custom.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->
     <script src="js/script.js"></script>
