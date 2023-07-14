@@ -48,6 +48,77 @@
     <link id="color" rel="stylesheet" href="css/color-1.css" media="screen" />
     <!-- Responsive css-->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    <style>
+      /* Gaya untuk slip gaji */
+      .slip-gaji {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+  
+      .slip-gaji h3 {
+        margin-top: 0;
+      }
+  
+      .slip-gaji table {
+        width: 100%;
+        margin-top: 20px;
+      }
+  
+      .slip-gaji th,
+      .slip-gaji td {
+        padding: 8px;
+        text-align: left;
+      }
+  
+      /* Gaya untuk detail gaji */
+      .detail-gaji {
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+  
+      .detail-gaji h3 {
+        margin-top: 0;
+      }
+  
+      .detail-gaji p {
+        margin: 0;
+      }
+  
+      /* Gaya untuk cetakan slip gaji */
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .slip-gaji,
+        .slip-gaji * {
+          visibility: visible;
+        }
+        .slip-gaji {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .slip-gaji h3 {
+          margin-top: 0;
+        }
+        .slip-gaji p {
+          margin: 0;
+        }
+        .slip-gaji table {
+          margin-top: 20px;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        .slip-gaji th,
+        .slip-gaji td {
+          padding: 8px;
+          text-align: left;
+          border: 1px solid #ddd;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Loader starts-->
@@ -713,7 +784,7 @@
                         </div>
                         <div class="row p-4">
                             <div class="col-md-3"><input class="form-control" placeholder="Input Field" type="date"></div>
-                            <div class="col-md-3"><button type="button" class="btn btn-primary">Generate Payroll</button><button type="button" class="btn btn-danger">Rollback Payroll</button></div>
+                            <div class="col-md-6"><button type="button" class="btn btn-primary">Generate Payroll</button><button type="button" class="btn btn-danger">Rollback Payroll</button></div>
                         </div>
                         <hr>
                       <div class="card-header">
@@ -734,34 +805,72 @@
                                   <td scope="col">Indra</td>
                                   <td scope="col">SPV</td>
                                   <td scope="col"><span style="background-color: darkcyan; padding: 5px; color: #fff;">Lunas</span></td>
-                                  <td scope="col"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-print"></i></a><a class="btn btn-success btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                                  <td scope="col">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="printSlipGaji('Indra')"><i class="fa fa-print"></i></a>
+                                    <a class="btn btn-success btn-sm" href="#" onclick="openModal('Indra')"><i class="fa fa-eye"></i></a>
+                                  </td>
                               </tr>
                               <tr>
                                   <td scope="col">Syafri</td>
                                   <td scope="col">Manager</td>
                                   <td scope="col"><span style="background-color: peru; padding: 5px; color: #fff;">Proses</span></td>
-                                  <td scope="col"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-print"></i></a><a class="btn btn-success btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                                  <td scope="col">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="printSlipGaji('Syafri')"><i class="fa fa-print"></i></a>
+                                    <a class="btn btn-success btn-sm" href="#" onclick="openModal('Syafri')"><i class="fa fa-eye"></i></a>
+                                  </td>
                               </tr>
                               <tr>
                                   <td scope="col">Rina</td>
                                   <td scope="col">IT</td>
                                   <td scope="col"><span style="background-color: brown; padding: 5px; color: #fff;">Need Generate</span></td>
-                                  <td scope="col"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-print"></i></a><a class="btn btn-success btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                                  <td scope="col">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="printSlipGaji('Rina')"><i class="fa fa-print"></i></a>
+                                    <a class="btn btn-success btn-sm" href="#" onclick="openModal('Rina')"><i class="fa fa-eye"></i></a>
+                                  </td>
                               </tr>
                               <tr>
                                   <td scope="col">Rachma</td>
                                   <td scope="col">Produksi</td>
                                   <td scope="col"><span style="background-color: brown; padding: 5px; color: #fff;">Need Generate</span></td>
-                                  <td scope="col"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-print"></i></a><a class="btn btn-success btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                                  <td scope="col">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="printSlipGaji('Rachma')"><i class="fa fa-print"></i></a>
+                                    <a class="btn btn-success btn-sm" href="#" onclick="openModal('Rachma')"><i class="fa fa-eye"></i></a>
+                                  </td>
                               </tr>
                               <tr>
                                   <td scope="col">Wanda</td>
                                   <td scope="col">Produksi</td>
                                   <td scope="col"><span style="background-color: brown; padding: 5px; color: #fff;">Need Generate</span></td>
-                                  <td scope="col"><a class="btn btn-primary btn-sm" href="#"><i class="fa fa-print"></i></a><a class="btn btn-success btn-sm" href="#"><i class="fa fa-eye"></i></a></td>
+                                  <td scope="col">
+                                    <a class="btn btn-primary btn-sm" href="#" onclick="printSlipGaji('Wanda')"><i class="fa fa-print"></i></a>
+                                    <a class="btn btn-success btn-sm" href="#" onclick="openModal('Wanda')"><i class="fa fa-eye"></i></a>
+                                  </td>
                               </tr>
                             </tbody>
                           </table>
+                      </div>
+                      <!-- Modal untuk detail gaji -->
+                      <div id="detailModal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Detail Gaji</h5>
+                              <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="detail-gaji">
+                                <h3 id="modalTitle"></h3>
+                                <p id="jabatan"></p>
+                                <p id="statusPayroll"></p>
+                                <table id="detailTable">
+                                  <!-- Tabel detail gaji akan diisi menggunakan JavaScript -->
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -820,5 +929,90 @@
     <script src="js/customizer.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
+    <script>
+      function printSlipGaji(nama) {
+        // Fungsi untuk mencetak slip gaji
+        console.log("Cetak slip gaji untuk: " + nama);
+        // Tambahkan kode cetak slip gaji di sini
+        var printWindow = window.open('', '_blank');
+        printWindow.document.open();
+        printWindow.document.write('<html><head><title>Slip Gaji - ' + nama + '</title></head><body>');
+        printWindow.document.write('<div class="slip-gaji">');
+        printWindow.document.write('<h3>' + nama + '</h3>');
+        printWindow.document.write('<p>Jabatan: SPV</p>');
+        printWindow.document.write('<p>Status Payroll: Lunas</p>');
+        printWindow.document.write('<table style="width: 100%;">');
+        printWindow.document.write('<tr><th>Elemen</th><th>Nilai</th></tr>');
+        printWindow.document.write('<tr><td>Tunjangan Jabatan</td><td style="text-align: right;">Rp 1.000.000</td></tr>');
+        printWindow.document.write('<tr><td>Tunjangan Transportasi</td><td style="text-align: right;">Rp 500.000</td></tr>');
+        printWindow.document.write('<tr><td>Tunjangan Makan</td><td style="text-align: right;">Rp 300.000</td></tr>');
+        printWindow.document.write('<tr><td>Tunjangan Kesehatan</td><td style="text-align: right;">Rp 200.000</td></tr>');
+        printWindow.document.write('<tr><td>Tunjangan Hari Raya</td><td style="text-align: right;">Rp 1.500.000</td></tr>');
+        printWindow.document.write('<tr><td>Insentif</td><td style="text-align: right;">Rp 2.000.000</td></tr>');
+        printWindow.document.write('<tr><td>Lembur</td><td style="text-align: right;">Rp 500.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan PPh</td><td style="text-align: right;">- Rp 1.000.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan Asuransi Ketenagakerjaan</td><td style="text-align: right;">- Rp 300.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan Absen</td><td style="text-align: right;">- Rp 200.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan BPJS Kesehatan</td><td style="text-align: right;">- Rp 150.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan BPJS Ketenagakerjaan</td><td style="text-align: right;">- Rp 250.000</td></tr>');
+        printWindow.document.write('<tr><td>Potongan Pinjaman Karyawan</td><td style="text-align: right;">- Rp 500.000</td></tr>');
+        printWindow.document.write('</table>');
+        printWindow.document.write('</div>');
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.print();
+        printWindow.close(); // Menutup tab setelah mencetak
+      }
+  
+      function openModal(nama) {
+        // Fungsi untuk membuka modal dengan detail gaji
+        console.log("Buka modal dengan detail gaji untuk: " + nama);
+        // Tambahkan kode membuka modal di sini
+        var modalTitle = document.getElementById("modalTitle");
+        var jabatan = document.getElementById("jabatan");
+        var statusPayroll = document.getElementById("statusPayroll");
+        var detailTable = document.getElementById("detailTable");
+  
+        modalTitle.textContent = nama;
+        jabatan.textContent = "Jabatan: SPV";
+        statusPayroll.textContent = "Status Payroll: Lunas";
+  
+        // Hapus semua baris pada tabel detail sebelumnya
+        while (detailTable.firstChild) {
+          detailTable.removeChild(detailTable.firstChild);
+        }
+  
+        // Tambahkan baris-baris baru ke tabel detail
+        var data = [
+          { elemen: "Tunjangan Jabatan", nilai: "Rp 1.000.000" },
+          { elemen: "Tunjangan Transportasi", nilai: "Rp 500.000" },
+          { elemen: "Tunjangan Makan", nilai: "Rp 300.000" },
+          { elemen: "Tunjangan Kesehatan", nilai: "Rp 200.000" },
+          { elemen: "Tunjangan Hari Raya", nilai: "Rp 1.500.000" },
+          { elemen: "Insentif", nilai: "Rp 2.000.000" },
+          { elemen: "Lembur", nilai: "Rp 500.000" },
+          { elemen: "Potongan PPh", nilai: "Rp 1.000.000" },
+          { elemen: "Potongan Asuransi Ketenagakerjaan", nilai: "Rp 300.000" },
+          { elemen: "Potongan Absen", nilai: "Rp 200.000" },
+          { elemen: "Potongan BPJS Kesehatan", nilai: "Rp 150.000" },
+          { elemen: "Potongan BPJS Ketenagakerjaan", nilai: "Rp 250.000" },
+          { elemen: "Potongan Pinjaman Karyawan", nilai: "Rp 500.000" }
+        ];
+  
+        data.forEach(function(item) {
+          var row = document.createElement("tr");
+          var elemenCell = document.createElement("th");
+          var nilaiCell = document.createElement("td");
+          elemenCell.textContent = item.elemen;
+          nilaiCell.textContent = item.nilai;
+          row.appendChild(elemenCell);
+          row.appendChild(nilaiCell);
+          detailTable.appendChild(row);
+        });
+  
+        // Tampilkan modal
+        $('#detailModal').modal('show');
+      }
+    </script>
   </body>
 </html>
